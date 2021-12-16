@@ -9,7 +9,7 @@ public class Server {
      new Thread( () ->{
         try {
             //Trin 1 - Lav server socket
-            ServerSocket serverSocket = new ServerSocket(1997);
+            ServerSocket serverSocket = new ServerSocket(1996);
 
             // Trin 2 - Få en socket til at lytte på den angivet port
             System.out.println("Accepting connection on port 1997");

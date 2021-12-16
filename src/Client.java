@@ -11,14 +11,17 @@ public class Client {
 
 
         try {
-            Socket socket = new Socket("localhost", 1997);
+            Socket socket = new Socket("localhost", 1996);
+            //Gøre klar til at modtage og sende data
             DataInputStream inputStream = new DataInputStream(socket.getInputStream());
             DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream());
 
             Scanner scanner = new Scanner(System.in);
             while (true) {
+                //Der er der, hvor man sender data til servern
                 outputStream.writeUTF(scanner.nextLine());
                 outputStream.flush();
+                //Læser data fra serveren
                 System.out.println(inputStream.readUTF());
             }
 
